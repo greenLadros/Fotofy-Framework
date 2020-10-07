@@ -11,27 +11,51 @@ import cv2 as cv
 class Filters():
     def reddify(self, img):
         """
-        description
+        this is reddify filter
+
+        Parameters:
+        img(matrix): the target image;
+
+        Returnes:
+        (matrix): the img with the filter;
         """
         img[:,:,2] = 255
         return img
     def blueify(self, img):
         """
-        description
+        this is blueify filter
+
+        Parameters:
+        img(matrix): the target image;
+
+        Returnes:
+        (matrix): the img with the filter;
         """
         img[:,:,0] = 255
         return img
 
     def greenify(self, img):
         """
-        description
+        this is greenify filter
+
+        Parameters:
+        img(matrix): the target image;
+
+        Returnes:
+        (matrix): the img with the filter;
         """
         img[:,:,1] = 255
         return img
     
     def blur(self, img):
         """
-        description
+        this is blur filter
+
+        Parameters:
+        img(matrix): the target image;
+
+        Returnes:
+        (matrix): the img with the filter;
         """
         width, height, channels = np.shape(img)
         imgSmall = cv.resize(img, (32, 32), interpolation=cv.INTER_LINEAR)
@@ -40,16 +64,28 @@ class Filters():
 
     def coldChils(self, img):
         """
-        description
+        this is coldChils filter
+
+        Parameters:
+        img(matrix): the target image;
+
+        Returnes:
+        (matrix): the img with the filter;
         """
         img[:,:,0] = 200
         return img
     
     def warmVibes(self, img):
         """
-        description
+        this is warmVibes filter
+
+        Parameters:
+        img(matrix): the target image;
+
+        Returnes:
+        (matrix): the img with the filter;
         """
         img[:,:,2] = 200
         return img
 
-filters = Filters()
+Filters = Filters()

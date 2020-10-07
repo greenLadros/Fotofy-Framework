@@ -10,6 +10,9 @@ import numpy as np
 
 class EditWindow():
     def __init__(self, img='blank', winname='myPicture', drawColor=(0, 255, 0)):
+        """
+        The EditWindow class is a special class only in Fotofy that allows the user to draw over and edit images.
+        """
         
         # creating base vars
         self.windowName = winname
@@ -34,9 +37,9 @@ class EditWindow():
         cv.setMouseCallback(self.windowName, self.draw)
 
     # creating function for drawing
-    def draw(self, event, x, y, flags, param):
+    def _draw(self, event, x, y, flags, param):
         """
-        description
+        private function
         """
 
         if event == cv.EVENT_RBUTTONDOWN:
@@ -65,7 +68,13 @@ class EditWindow():
 
     def show(self, save=True, fileName="myPicture.jpg"):
         """
-        description
+        this function opens the EditWindow
+
+        Parameters:
+        save(bool): if the image will be saved to a file after the window is closed;
+
+        Returnes:
+        Nothing;
         """
         #show the image
         while True:

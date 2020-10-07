@@ -11,7 +11,18 @@ import cv2 as cv
 class Blender():
     def blendImages(self, firstImage, secondImage, y_val, x_val, background='white'): # roi is region of intrest
         """
-        description
+        This function blends images.
+
+        Parameters:
+        firstImage(matrix): image to blend into;
+        secondImage(matrix): BGR image to blend onto firstImage;
+        y_val(int): y value to set the roi(region of intrest);
+        x_val(int): x value to set the roi(region of intrest);
+        background(string): if background is white or close to white dont change the deafult "white"
+        if not so every thing except 'white' works just fine;
+
+        Returnes:
+        Nothing;
         """
         x_offset = firstImage.shape()[1] + x_val
         y_offset = firstImage.shape()[0] + y_val
@@ -39,7 +50,18 @@ class Blender():
 
     def blendWeightedImages(self, firstImage, alpha, secondImage, beta, gamma=0, targetSize=(500, 500)):
         """
-        description
+        This function blends images based on weight values.
+
+        Parameters:
+        firstImage(matrix): BGR image to blend into;
+        alpha(int): the weight of the first image;
+        secondImage(matrix): BGR image to blend onto firstImage;
+        beta(int): the weight of the second image;
+        gamma(int): optional weight value;
+        size(tuple(int, int)): the final size the final image will be in;
+
+        Returnes:
+        (matrix): The Final image;
         """
         #converting images to rgb
         img1 = cv.cvtColor(firstImage, cv.COLOR_BGR2RGB)
@@ -57,7 +79,16 @@ class Blender():
 
     def putOnImage(self, largeImage, smallImage, y_val=250, x_val=250):
         """
-        description
+        This function puts smaller image on another image.
+
+        Parameters:
+        largeImage(matrix): image to put into;
+        smallImage(matrix): BGR image to put onto largeImage;
+        y_val(int): y value to set the roi(region of intrest);
+        x_val(int): x value to set the roi(region of intrest);
+
+        Returnes:
+        Nothing;
         """
         #creating the offsets
         y_offset = largeImage.shape()[0] + y_val
@@ -68,3 +99,5 @@ class Blender():
             large_image[y_offset:y_offset +smallImage.shape()[0],x_offset:x_offset +smallImage.shape()[1]] = smallImage
         except:
             print('failed merging images')
+
+Blender = Blender()

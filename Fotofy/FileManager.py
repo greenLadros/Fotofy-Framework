@@ -20,3 +20,5 @@ class FileManager():
         description
         """
         pass
+
+FileManager = FileManager()
