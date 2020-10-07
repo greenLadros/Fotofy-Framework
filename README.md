@@ -1,5 +1,16 @@
 # Fotofy-Framework
 
+## How can i install it?
+### pip install fotofy-cv
+
+## How can i import it?
+### import Fotofy
+### From Fotofy.Image import Image
+### From Fotofy.EditWindow import EditWindow
+### From Fotofy.Filters import Filters
+### From Fotofy.Blender import Blender
+### and more..
+
 ## What is Fotofy?
 Fotofy is an open-source python framework bsed on opencv and numpy.
 Fotofy is a strong frame-work for beginners and advenced,
