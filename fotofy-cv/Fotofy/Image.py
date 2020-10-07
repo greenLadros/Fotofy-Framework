@@ -12,9 +12,9 @@ from Fotofy.EditWindow import EditWindow
 from Fotofy.Brush import Brush
 from Fotofy.Blender import Blender
 
-filters = Filters()
-brush = Brush()
-blender = Blender()
+filters = Filters
+brush = Brush
+blender = Blender
 
 #creating the class
 class Image():

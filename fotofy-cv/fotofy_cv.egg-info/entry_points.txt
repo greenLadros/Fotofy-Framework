@@ -1,0 +1,3 @@
+[console_scripts]
+fotofy-cv = Fotofy.__main__:main
+

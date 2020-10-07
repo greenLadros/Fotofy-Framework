@@ -34,7 +34,7 @@ class EditWindow():
 
         #setting the call back function
         cv.namedWindow(winname=self.windowName)
-        cv.setMouseCallback(self.windowName, self.draw)
+        cv.setMouseCallback(self.windowName, self._draw)
 
     # creating function for drawing
     def _draw(self, event, x, y, flags, param):

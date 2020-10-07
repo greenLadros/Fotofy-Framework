@@ -1,0 +1,17 @@
+README.md
+setup.py
+Fotofy/Blender.py
+Fotofy/Brush.py
+Fotofy/EditWindow.py
+Fotofy/FileManager.py
+Fotofy/Filters.py
+Fotofy/Image.py
+Fotofy/Tracker.py
+Fotofy/__init__.py
+Fotofy/__main__.py
+fotofy_cv.egg-info/PKG-INFO
+fotofy_cv.egg-info/SOURCES.txt
+fotofy_cv.egg-info/dependency_links.txt
+fotofy_cv.egg-info/entry_points.txt
+fotofy_cv.egg-info/requires.txt
+fotofy_cv.egg-info/top_level.txt
