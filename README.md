@@ -1,4 +1,4 @@
-# Fotofy-Framwork
+# Fotofy-Framework
 
 ## What is Fotofy?
 Fotofy is an open-source python framework bsed on opencv and numpy.
